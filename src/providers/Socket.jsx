@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useMemo } from 'react'
 import { io } from 'socket.io-client'
 
-const API_URL = 'http://localhost:8000'
+// const API_URL = 'http://localhost:8000'
+const API_URL = 'https://webrtc-client-4hor.onrender.com'
 const SocketContext = createContext(null)
 
 export const useSocket = () => useContext(SocketContext)
