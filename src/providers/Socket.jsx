@@ -1,13 +1,14 @@
 import React, { createContext, useContext, useMemo } from 'react'
 import { io } from 'socket.io-client'
 
+const API_URL = 'http://localhost:8000'
 const SocketContext = createContext(null)
 
 export const useSocket = () => useContext(SocketContext)
 
 const SocketProvider = ({ children }) => {
     const socket = useMemo(() => {
-        return io(process.env.REACT_APP_API_URL)
+        return io(API_URL)
     }, [])
     return (
         <SocketContext.Provider value={{socket}}>

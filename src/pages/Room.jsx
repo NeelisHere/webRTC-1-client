@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useSocket } from '../providers/Socket'
-// import { socketActions } from '../socketActions'
 import peerService from '../services/peer'
 import ReactPlayer from 'react-player'
 import { Box, Button, Text } from '@chakra-ui/react'
@@ -9,7 +8,6 @@ import { Box, Button, Text } from '@chakra-ui/react'
 const Room = () => {
     const { roomId } = useParams()
     const { socket } = useSocket()
-    // const { peer, createOffer, createAnswer, setRemoteAnswer, sendStream, remoteStream } = usePeer()
 
     const [myStream, setMyStream] = useState(null)
     const [remoteStream, setRemoteStream] = useState(null)
